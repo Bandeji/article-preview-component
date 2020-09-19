@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    font-family: Manrope, sans-serif;
+}
+
+.card {
+    width: 45vw;
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content,
+.user {
+    padding: 10px;
+}
+
+.card-content h4 {
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.card-content p {
+    font-weight: 500;
+}
+
+.card-content h4,
+.user-info h4 {
+    color: hsl(217, 19%, 35%);
+}
+
+.card-content p,
+.user-info small {
+    color: hsl(214, 17%, 51%);
+}
+
+.user {
+    display: flex;
+}
+
+.user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-info h4 {
+    margin: 0;
+}
+
+.share-icon {
+   margin-left: auto;
+   width: 35px;
+   height: 35px;
+   padding: 5px;
+   border-radius: 50%;
+   background-color: hsl(210, 46%, 95%);
+   text-align: center;
+}
+
+.share-icon:hover {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.share-media {
+    background-color: hsl(217, 19%, 35%);
+    padding: 0 5px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+.share-media h4 {
+    color: hsl(212, 23%, 69%);
+    font-weight: normal;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-right: 20px;
+}
+
+.facebook-icon,
+.twitter-icon {
+    margin-right: 15px;
+}
+
+.share-media span {
+    margin-left: auto;
+    color: hsl(212, 23%, 69%);
+    align-self: start;
+    font-family: Manrope, sans-serif;
+}
+
+
+/* =============================
+        MEDIA QUERIES
+===============================*/
+
+
+/*  Desktop  */
+@media only screen and (min-width: 768px) {
+    .card {
+        width: 57vw;
+        display: flex;
+    }
+
+    .card-header {
+        flex: 0.9;
+    }
+
+    .card-header-img {
+        height: 100%;
+    }
+
+    .card-body {
+        margin-left: 15px;
+        flex: 1.55;
+    }
+
+    .share-icon {
+        margin-right: 10px;
+    }
+    
+    .share-media {
+        height: 40px;
+        border-radius: 10px;
+        padding: 0 10px;
+        position: absolute;
+        top: 51%;
+        right: 17%;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .share-media::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 10px solid hsl(217, 19%, 35%);
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        position: absolute;
+        bottom: -8px;
+        left: 45%;
+    }
+
+    .share-media span {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+}
+
+
+/*================
+    Attribution 
+ =================*/
+.attribution {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
